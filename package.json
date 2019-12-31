@@ -1,0 +1,16 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass scss/main.scss css/style.css -w",
+    "start": "live-server"
+  },
+  "author": "Helena Converse",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "live-server": "^1.2.1"
+  }
+}
