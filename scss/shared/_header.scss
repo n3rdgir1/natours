@@ -2,7 +2,7 @@
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba($light-green, 0.8), rgba($dark-green, 0.8)),
+  background-image: linear-gradient(to right bottom, rgba($theme-light, 0.8), rgba($theme-dark, 0.8)),
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
@@ -11,12 +11,12 @@
 
   .logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem;
+    top: 40px;
+    left: 40px;
   }
 
   .logo {
-    height: 4rem;
+    height: 40px;
   }
 
   .text-box {
@@ -34,22 +34,22 @@
 
   /* get rid of wiggle after transformation  */
   backface-visibility: hidden;
-  margin-bottom: 6rem;
+  margin-bottom: 60px;
 
   &--main {
     display: block;
-    font-size: 6rem;
+    font-size: 60px;
     font-weight: 400;
-    letter-spacing: 3.5rem;
+    letter-spacing: 35px;
 
     animation: moveInLeft 0.8s ease-out;
   }
 
   &--sub {
     display: block;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 1.75rem;
+    letter-spacing: 17.5px;
 
     animation: moveInRight 0.8s ease-out;
   }

@@ -1,7 +1,7 @@
 @import "shared/_animations";
 @import "shared/_variables";
 @import "shared/header";
-@import "shared/forms";
+@import "shared/links";
 @import "shared/grid";
 
 *,
@@ -12,16 +12,12 @@
   box-sizing: inherit;
 }
 
-html {
-  font-size: 52.5%;
-}
-
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: $gray;
-  padding: 3rem;
+  padding: 30px;
   box-sizing: border-box;
 }
 
@@ -37,6 +33,10 @@ body {
   h2 {
     @include margin-bottom-big;
   }
+
+  h3 {
+    @include margin-bottom-xs;
+  }
 }
 
 h2 {
@@ -44,7 +44,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, $light-green, $dark-green);
+  background-image: linear-gradient(to right, $theme-light, $theme-dark);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -53,6 +53,17 @@ h2 {
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 5px 10px 20px rgba(black, .2);
+    text-shadow: 5px 10px 20px $shadow;
+  }
+}
+
+h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  &:not(:last-child) {
+    margin-bottom: $small-space;
   }
 }

@@ -1,0 +1,76 @@
+@import "_animations";
+@import "_variables";
+
+a {
+  &:link, &:visited {
+    color: $theme-dark;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $theme-dark;
+    padding: 3px;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $theme-dark;
+    color: $white;
+    box-shadow: 0 10px 20px $shadow;
+    transform: translateY(-2px);
+  }
+
+  &:active, &:focus {
+    box-shadow: 0 10px 20px $shadow;
+    transform: translateY(0);
+  }
+}
+
+.button {
+  &:link,
+  &:visited {
+    padding: 15px 40px;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  &--white {
+    background-color: $white;
+    color: $gray;
+
+    &:link, &:visited {
+      background-color: $white;
+      color: $gray;
+    }
+
+    &:hover, &:focus {
+      background-clip: $white;
+      color: $gray;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  &--white::after {
+    background-color: $white;
+  }
+
+  &--animate {
+    animation: moveInButton 0.5s ease-out 0.3s;
+    animation-fill-mode: backwards;
+  }
+}
