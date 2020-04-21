@@ -31,3 +31,11 @@ $gutter-horizontal: $medium-space;
 @mixin margin-bottom-xs {
   margin-bottom: $xs-space;
 }
+
+@mixin gradient-text {
+  display: inline-block;
+  background-image: linear-gradient(to right, $theme-light, $theme-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
