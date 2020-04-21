@@ -43,7 +43,7 @@ body {
 
 .features {
   padding: 200px 0;  
-  background-image: linear-gradient(to right bottom, rgba($theme-light, 0.8), rgba($theme-dark, 0.8)),
+  background-image: $diagonal-gradient,
     url(../img/nat-4.jpg);
   background-size: cover;
 
