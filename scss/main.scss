@@ -5,6 +5,7 @@
 @import "shared/grid";
 @import "composition";
 @import "feature_box";
+@import "card";
 
 *,
 *::after,
@@ -54,6 +55,21 @@ body {
     transform: skewY(7deg);
   }
 }
+
+.tours {
+  background-color: $light-gray-background;
+  padding: 280px 0 500px;
+  margin-top: -29vh;
+
+  h2 {
+    @include margin-bottom-big;
+  }
+
+  h3 {
+    @include margin-bottom-xs;
+  }
+}
+
 
 h2 {
   font-size: 35px;
