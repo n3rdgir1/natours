@@ -25,14 +25,40 @@ $circle: circle(50% at 50% 50%);
     -webkit-clip-path: $circle;
     clip-path: $circle;
     transform: translateX(-30px) skewX(12deg);
+    position: relative;
 
     img {
       height: 100%;
+      transform: translateX(-40px) scale(1.4);
+      transition: all .5s;
     }
+
+    figcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      color: $white;
+      text-transform: uppercase;
+      font-size: 17px;
+      text-align: center;
+      opacity: 0;
+      transition: all .5s;
+      backface-visibility: hidden;
+    }
+  }
+
+  &:hover &--shape figcaption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &--shape img {
+    transform: translateX(-40px) scale(1);
+    filter: blur(3px) brightness(80%);
   }
 
   &--text {
     transform: skewX(12deg);
-
   }
 }
