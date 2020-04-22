@@ -47,6 +47,21 @@ a {
     }
   }
 
+  &--green {
+    background-color: $theme-medium;
+    color: $white;
+
+    &:link, &:visited {
+      background-color: $theme-medium;
+      color: $white;
+    }
+
+    &:hover, &:focus {
+      background-clip: $theme-medium;
+      color: $white;
+    }
+  }
+  
   &::after {
     content: "";
     display: inline-block;
@@ -67,6 +82,10 @@ a {
 
   &--white::after {
     background-color: $white;
+  }
+
+  &--green::after {
+    background-color: $theme-medium;
   }
 
   &--animate {
