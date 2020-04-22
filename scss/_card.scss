@@ -2,11 +2,11 @@
   perspective: 1500px;
   -moz-perspective: 1500px;
   position: relative;
-  height: 500px;
+  height: 520px;
   
   .card-face {
     font-size: 20px;
-    height: 500px;
+    height: 520px;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -15,6 +15,7 @@
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 15px 40px $shadow;
+    overflow: hidden;
 
     &.front {
       background-color: $white;
@@ -32,21 +33,86 @@
 
       &.secondary {
         background-image: linear-gradient(to right bottom, $theme-secondary-light, $theme-secondary-dark);
-
       }
 
       &.tertiary {
         background-image: linear-gradient(to right bottom, $theme-tertiary-light, $theme-tertiary-dark);
-
       }
     }
   }
 
   &:hover .card-face.front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover .card-face.back {
     transform: rotateY(0);
+  }
+
+  &--picture {
+    background-size: cover;
+    height: 230px;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &.secondary {
+      background-image: url('../img/nat-5.jpg'), linear-gradient(to right bottom, $theme-secondary-light, $theme-secondary-dark);
+    }
+
+    &.primary {
+      background-image: url('../img/nat-6.jpg'), linear-gradient(to right bottom, $theme-light, $theme-dark);
+    }
+
+    &.tertiary {
+      background-image: url('../img/nat-7.jpg'), linear-gradient(to right bottom, $theme-tertiary-light, $theme-tertiary-dark);
+    }
+  }
+
+  h4 {
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $white;
+    position: absolute;
+    top: 120px;
+    right: 40px;
+    width: 50%;
+
+    span {
+      padding: 10px 15px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+      &.secondary {
+        background-image: linear-gradient(to right bottom, rgba($theme-secondary-light, .85), rgba($theme-secondary-dark, .85));
+      }
+      &.primary {
+        background-image: linear-gradient(to right bottom, rgba($theme-light, .85), rgba($theme-dark, .85));
+      }
+      &.tertiary {
+        background-image: linear-gradient(to right bottom, rgba($theme-tertiary-light, .85), rgba($theme-tertiary-dark, .85));
+      }
+    }
+  }
+
+  &--details {
+    padding: 30px;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        &:not(:last-child) {
+          border-bottom: 1px solid $light-gray;
+        }
+      }
+    }
   }
 }
