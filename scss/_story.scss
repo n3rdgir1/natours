@@ -1,0 +1,38 @@
+@import 'shared/variables';
+
+$circle: circle(50% at 50% 50%);
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 30px 60px $shadow;
+  background-color: $white;
+  border-radius: 3px;
+  padding: 60px;
+  padding-left: 90px;
+  transform: skewX(-12deg);
+
+  h3 {
+    @include margin-bottom-xs;
+  }
+
+  &--shape {
+    height: 150px;
+    width: 150px;
+    float: left;
+    -webkit-shape-outside: $circle;
+    shape-outside: $circle;
+    -webkit-clip-path: $circle;
+    clip-path: $circle;
+    transform: translateX(-30px) skewX(12deg);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &--text {
+    transform: skewX(12deg);
+
+  }
+}

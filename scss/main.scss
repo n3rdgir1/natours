@@ -6,6 +6,7 @@
 @import "composition";
 @import "feature_box";
 @import "card";
+@import "story";
 
 *,
 *::after,
@@ -70,6 +71,14 @@ body {
   }
 }
 
+.stories {
+  padding: 150px 0;
+  background-color: $light-gray-background;
+
+  h2 {
+    @include margin-bottom-big;
+  }
+}
 
 h2 {
   font-size: 35px;
