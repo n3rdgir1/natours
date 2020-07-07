@@ -3,6 +3,7 @@
 @import "shared/header";
 @import "shared/links";
 @import "shared/grid";
+@import "bg_video";
 @import "composition";
 @import "feature_box";
 @import "card";
@@ -72,8 +73,8 @@ body {
 }
 
 .stories {
+  position: relative;
   padding: 150px 0;
-  background-color: $light-gray-background;
 
   h2 {
     @include margin-bottom-big;

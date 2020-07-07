@@ -6,7 +6,7 @@ $circle: circle(50% at 50% 50%);
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 30px 60px $shadow;
-  background-color: $white;
+  background-color: rgba($white, .6);
   border-radius: 3px;
   padding: 60px;
   padding-left: 90px;
