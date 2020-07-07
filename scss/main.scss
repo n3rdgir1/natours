@@ -81,6 +81,20 @@ body {
   }
 }
 
+.booking {
+  padding: 150px 0;
+  background-image: linear-gradient(to right bottom, $theme-light, $theme-dark);
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba($white, .9) 0%,rgba($white, .9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 15px 40px $shadow;
+
+  height: 500px; //temp
+}
+
 h2 {
   font-size: 35px;
   text-transform: uppercase;
